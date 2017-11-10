@@ -34,3 +34,57 @@ exports.createUser = (req, res) => {
     });
 } 
 
+exports.getMoviesByGenre= function (req,res){
+    var genre= req.params.genre;
+ Movies.find({genre:genre},function(err, response){
+     if(err)
+     res.send(err);
+     else
+     res.json(response);
+ });
+}
+ 
+exports.getSeriesByGenre= function (req,res){
+    var genre= req.params.genre;
+ Series.find({genre:genre},function(err, response){
+     if(err)
+     res.send(err);
+     else
+     res.json(response);
+ });
+}
+ 
+exports.addMovie = function (req, res){
+    var movie=new Movies({
+        name: req.body.name,
+        descriprtion: req.body.description,
+        genre: req.body.genre
+      });
+
+   movie.save(function(error,response){
+       if(error)
+       res.json({success: false,
+           body: error});
+       else{
+         
+      res.json({sucess: true,
+           body: response});
+       }
+
+           });
+   }
+
+   exports.deleteMovie = function(req, res) {
+    var name=req.params.name;
+     Movies.remove({
+       name: name
+     }, function(err, task) {
+       if (err)
+         res.send(err);
+       res.json({ 
+        success: true,   
+        message: ' Movie deleted successfully' });
+     });
+   };
+
+   
