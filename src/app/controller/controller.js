@@ -5,15 +5,6 @@ var Seasons= mongoose.model('seasonsinfo');
 var Episodes= mongoose.model('episodesinfo');
 var Movies= mongoose.model('moviesinfo');
 
-exports.getUser = (req,res) => {
-    var email = req.params.email;
-    User.findOne({email: email}, (error, response) => {
-        if (error) {
-            return res.json(req, res, error);
-        }
-        res.json(response);
-    });
-} 
 exports.createUser = (req, res) => {
     var user = new User({
         email: req.body.email,
@@ -34,34 +25,24 @@ exports.createUser = (req, res) => {
     });
 } 
 
-exports.getMoviesByGenre= function (req,res){
-    var genre= req.params.genre;
- Movies.find({genre:genre},function(err, response){
-     if(err)
-     res.send(err);
-     else
-     res.json(response);
- });
-}
- 
-exports.getSeriesByGenre= function (req,res){
-    var genre= req.params.genre;
- Series.find({genre:genre},function(err, response){
-     if(err)
-     res.send(err);
-     else
-     res.json(response);
- });
-}
- 
+exports.getUser = (req,res) => {
+    var email = req.params.email;
+    User.findOne({email: email}, (error, response) => {
+        if (error) {
+            return res.json(req, res, error);
+        }
+        res.json(response);
+    });
+} 
+
 exports.addMovie = function (req, res){
-    var movie=new Movies({
-        name: req.body.name,
-        descriprtion: req.body.description,
-        genre: req.body.genre
+    var movies=new Movies({
+        movieName: req.body.movieName,
+        genre: req.body.genre,
+        descriprtion: req.body.description
       });
 
-   movie.save(function(error,response){
+   movies.save(function(error,response){
        if(error)
        res.json({success: false,
            body: error});
@@ -71,13 +52,34 @@ exports.addMovie = function (req, res){
            body: response});
        }
 
-           });
-   }
+    });
+}
 
-   exports.deleteMovie = function(req, res) {
+exports.getMoviesByGenre= function (req,res){
+    var genre= req.params.genre;
+ Movies.find({genre:genre},function(err, response){
+     if(err)
+     res.send(err);
+     else
+     res.json(response);
+    });
+}
+ 
+exports.getSeriesByGenre= function (req,res){
+    var genre= req.params.genre;
+ Series.find({genre:genre},function(err, response){
+     if(err)
+     res.send(err);
+     else
+     res.json(response);
+    });
+}
+ 
+
+exports.deleteMovie = function(req, res) {
     var name=req.params.name;
      Movies.remove({
-       name: name
+       movieName: name
      }, function(err, task) {
        if (err)
          res.send(err);
@@ -85,6 +87,6 @@ exports.addMovie = function (req, res){
         success: true,   
         message: ' Movie deleted successfully' });
      });
-   };
+    };
 
    
