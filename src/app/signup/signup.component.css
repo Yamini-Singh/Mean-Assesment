@@ -36,30 +36,42 @@ h1{ color: #FFFFFF;
         
     input[type=button],input[type=submit],input[type=reset] {
         width: 150px;
-        background-color: #ff8000;
+        background-color: #0A558F;
         color: white;
         padding: 14px 20px;
         margin:20px 20px;
         border: none;
         border-radius: 32px;
         cursor: pointer;
+       
     }
+    input[type=button]:hover,input[type=submit]:hover {
+        background-color: #09517E;
+        box-shadow: 2px 1px 2px #808080;
+    }
+
     input[type=button]:hover,input[type=reset]:hover {
-        background-color: #F07603;
+        background-color: #09517E;
         box-shadow: 2px 1px 2px #808080;
     }
     #body {
-        border-radius: 5px;
-        background-color: #ADE2A6;
-        padding: 100px;
-        width: 300px;
-        height: 350px;
-        margin: 0 auto;
-        font-family: Century Gothic;
-        font-size: 90%;
-        box-shadow: 5px 4px 16px grey;
+        background: #5f2c82;  /* fallback for old browsers */
+        background: -webkit-linear-gradient(to right, #49a09d, #5f2c82);  /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to right, #49a09d, #5f2c82); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        
+       
+       
     }
     th, td {
         text-align: left;
-        width: 200px;
+     
+      
     }
+#form{
+    padding: 100px;
+    width: 400px;
+    height: 450px;
+    margin: 0 auto;
+    font-family: Century Gothic;
+    font-size: 100%;
+}

@@ -1,14 +1,18 @@
 footer{
     position: bottom;
     width: auto;
-    height: 50px;
+    height: 80px;
     background: #161616;
-    margin:0px;
-    padding: 40px;
+    padding: 10px;
+    margin: 0px 0px; 
+    color: white;
     
 }
 p{
+font-size: 120%;
 
-margin: 0px;
+}
 
+body{
+    margin: 0px 0px; 
 }

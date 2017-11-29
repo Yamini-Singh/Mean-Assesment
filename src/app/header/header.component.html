@@ -2,7 +2,8 @@
 <head>
 <style>
 body {
-  margin:0;
+  margin: 0px 0px;
+  width: auto;
   
 }
 
@@ -36,10 +37,19 @@ body {
 
 <div class="topnav">
   <a [routerLink]="['/home']">Home</a>
+  
+  <ng-template [ngIf]="!service.show">
   <a [routerLink]="['/login']">Login</a>
   <a [routerLink]="['/signup']">Signup</a>
-  <a href="#about">TV Shows</a>
-  <a href="#about">Movies</a>
+</ng-template>
+  
+<ng-template [ngIf]="service.show">
+    <ng-template [ngIf]="!service.role">
+  <a [routerLink]="['/edit']">Edit</a>
+    </ng-template>
+  <a [routerLink]="['/login']" (click)="logout()" >Logout</a>
+
+</ng-template>  
 </div>
 
 

@@ -11,6 +11,10 @@ import { HttpModule } from '@angular/http';
 import { AuthenticationService } from './authentication.service';
 import { FormsModule } from '@angular/forms';
 import { SignupComponent } from './signup/signup.component';
+import { LoggedinpageComponent } from './loggedinpage/loggedinpage.component';
+import { MoviesComponent } from './movies/movies.component';
+import { TvseriesComponent } from './tvseries/tvseries.component';
+import { EditComponent } from './edit/edit.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +24,11 @@ import { SignupComponent } from './signup/signup.component';
     HomeComponent,
     LoginComponent,
     routingComponents,
-    SignupComponent
+    SignupComponent,
+    LoggedinpageComponent,
+    MoviesComponent,
+    TvseriesComponent,
+    EditComponent
   ],
   imports: [
     BrowserModule,

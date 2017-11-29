@@ -1,0 +1,42 @@
+body{
+    margin: 0px 0px;
+    background: #FF5F6D;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #FFC371, #FF5F6D);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #FFC371, #FF5F6D); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    min-height: 700px;
+    height: auto;
+}
+
+.col-md-3{
+    width: 450px;
+    height:650px ;
+    align-content: center;
+  
+}
+
+img{
+    width: 450px;
+    height:450px ;
+}
+
+.caption{
+    width: 350px;
+    height:150px ;
+    align-content: center;
+    
+}
+
+.button1{
+    background-color: #E04141; 
+    border: none;
+    padding: 15px;
+    padding-right: 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 17px;
+    margin: 8px 3px;
+    cursor: pointer;
+    border-radius: 12px;
+    width: 80px;
+}

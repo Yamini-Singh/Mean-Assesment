@@ -1,0 +1,92 @@
+h3{ color: #FFFFFF;
+    font-family: corbel;
+    background-color: #2F92A3;
+    padding: 40px;
+    font-size: 60px;
+}
+    
+input[type=text],input[type=number],input[type=password],input[type=date],textarea,select {
+        width: 100%;
+        padding: 6px 20px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+        font-size: 110%; 
+}
+
+input::-webkit-inner-spin-button,input::-webkit-outer-spin-button{
+        -webkit-appearance: none;
+        margin: 0;
+}
+
+input[type=text]:hover,textarea:hover,input[type=number]:hover {
+        box-shadow: 2px 1px 2px grey;
+}
+    
+.alert{
+        font-family: sans-serif;
+        font-weight: bold;
+        font-size: 10px;
+        color: red;
+        padding: 0 ;
+}
+        
+input[type=button],input[type=submit],input[type=reset] {
+        width: 150px;
+        background-color: #0A558F;
+        color: white;
+        padding: 14px 20px;
+        margin:20px 20px;
+        border: none;
+        border-radius: 32px;
+        cursor: pointer;    
+}
+
+input[type=button]:hover,input[type=submit]:hover {
+        background-color: #09517E;
+        box-shadow: 2px 1px 2px #808080;
+}
+
+input[type=button]:hover,input[type=reset]:hover {
+        background-color: #09517E;
+        box-shadow: 2px 1px 2px #808080;
+}
+
+body{
+        margin: 0px 0px;
+        background: #00C9FF;  /* fallback for old browsers */
+        background: -webkit-linear-gradient(to right, #92FE9D, #00C9FF);  /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to right, #92FE9D, #00C9FF); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+th, td {
+        text-align: left;
+     
+      
+}
+
+#form{
+    padding: 100px;
+    width: 400px;
+    height: 450px;
+    margin: 0 auto;
+    font-family: Century Gothic;
+    font-size: 100%;
+}
+
+.button1{
+        background-color: #0C69A3; 
+        border: none;
+        padding: 15px;
+        padding-right: 10px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 17px;
+        margin: 8px 3px;
+        cursor: pointer;
+        border-radius: 12px;
+        width: 80px;
+    }
